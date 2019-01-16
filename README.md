@@ -11,7 +11,7 @@ This is a test that will help us review the quality of work for developers. This
 Develop a Laravel application with user login (No registration). This application will be used to manage companies and their assets. You will need to include the following views.
 - Companies list table (With Pagination)
 - Single Company View. (Can double as the edit form).
-- New Company form.
+- New Company form.s
 
 A company must consist of the following info:
   Name (required), email, logo (minimum 100×100), website as well as their asset list.
