@@ -5,10 +5,244 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+html, body{
+    background-color:$white-grey;
+    font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    color:$grey;
+    position:relative;
+}
+
+a{
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.wrapper{
+    width:960px;
+    margin:30px auto 0;
+    background-color:$white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header{
+    text-align:right;
+    padding:10px;
+    margin-bottom:10px;
+    background-color:$header;
+}
+
+header a{
+    font-size:20px;
+    color:$white;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    margin-left:10px;
+    text-align:center;
+    display:inline-block;
+}
+
+header a:visited { text-decoration: none; color: $white}
+
+header a:hover, .list-mode header a.hide-list:hover{
+    background-color:$buttom-hover;
+}
+
+header a.hide-list{
+    background-color:$buttom-hover;
+}
+
+header a i{
+    line-height: inherit !important;
+}
+
+.list-mode header a.hide-list{
+    background-color:$header;
+}
+
+.list-mode header a.show-list{
+    background-color:$buttom-hover;
+}
+
+.container:after{
+    content:"";
+    clear:both;
+    display:table;
+}
+
+.container{
+    padding:10px 0 10px 10px;
+}
+
+.wrapper .box{
+    float:left;
+    width:100px;
+    height:100px;
+    margin:0 10px 10px 0;
+    background-color:$white-grey;
+    /*-webkit-transition:all 1.0s ease;*/
+    /*-moz-transition:all 1.0s ease;*/
+    /*transition:all 1.0s ease;*/
+    /*transition:all 1.0s ease;*/
+}
+
+.wrapper.list-mode .container{
+    padding-right:10px;
+}
+
+.wrapper.list-mode .box{
+    text-align: left;
+    width:100%;
+    border: 1px solid #ddd;
+}
+
+.wrapper.list-mode .box a {
+    display: block;
+    color:$grey;
+}
+
+.wrapper.list-mode .box a:visited { text-decoration: none; color: $grey}
+
+.wrapper.list-mode .box:hover{
+    background:$list-hover;
+
+    a {
+        color: #ddd;
+    }
+}
+
+.wrapper .box img {
+    border: 1px solid #ddd;
+}
+
+.wrapper.list-mode .box img{
+    width:100px;
+    height:100%;
+    display: inline-block;
+    border: none !important;
+    border-right: 1px solid #ddd;
+}
+
+.content {
+    display: none;
+}
+
+.wrapper.list-mode .box .content{
+    height:100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.wrapper.list-mode .box .content div{
+    padding: 3px 0;
+    font-size: 14px;
+    font-family: fantasy;
+}
+
+#logo-container {
+    display: inline-block;
+}
+
+#logo-container {
+    border: 1px solid #ddd;
+    margin: 10px 33px;
+    vertical-align: top;
+}
+
+#input-form {
+    display: block;
+    margin: 35px;
+}
+
+.form-group {
+    margin: 20px 0px;
+}
+
+.form-group label {
+    top: -20px;
+    font-size: 14px;
+    color: #5dba9d;
+    display: block;
+}
+
+.form-group input[type=text] {
+    padding: 20px 0 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+.ghost-input {
+    color: #009688;
+    background: #fff;
+    border: 1px solid #009688;
+    font-size: 17px;
+    padding: 7px 12px;
+    font-weight: normal;
+    margin: 6px 0;
+    margin-right: 12px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 120px;
+}
+
+.ghost-input:hover, .ghost-input:active {
+    color:#fff;
+    background:#009688;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.faux-table {
+    margin-top: 2em;
+
+    ul {
+        border-bottom: 1px solid $Dividers;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    li {
+        //border: 1px solid #000;
+        box-sizing: border-box;
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        overflow: hidden;
+        padding: 10px 0;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 1/6 * 100%;
+        vertical-align: middle;
+    }
+
+    .header {
+        li {
+            font-weight: bold;
+            padding: 5px;
+        }
+    }
 }
